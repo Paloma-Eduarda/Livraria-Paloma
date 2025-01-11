@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.tads.livraria.CadastroLivros">
+   <children>
+      <GridPane layoutX="129.0" layoutY="71.0" prefHeight="258.0" prefWidth="343.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="tituloLivroLabel" text="Titulo" />
+            <Label id="editoraLivroLabel" text="Editora:" GridPane.rowIndex="2" />
+            <Label id="generoLivroLabel" text="Genero:" GridPane.rowIndex="4" />
+            <Label id="autorLivroLabel" text="Autor:" GridPane.rowIndex="1" />
+            <Label id="isbnLivroLabel" layoutX="10.0" layoutY="46.0" text="ISBN:" GridPane.rowIndex="3" />
+            <Label id="anoLivroLabel" layoutX="10.0" layoutY="106.0" text="Ano:" GridPane.rowIndex="5" />
+            <Label id="paginasLivroLabel" layoutX="10.0" layoutY="166.0" text="Numero de Paginas:" GridPane.rowIndex="6" />
+            <TextField id="tituloLivroInput" fx:id="tituloLivroInput" GridPane.columnIndex="1" />
+            <TextField id="autorLivroInput" fx:id="autorLivroInput" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="editoraLivroInput" fx:id="editoraLivroInput" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="isbnLivroInput" fx:id="isbnLivroInput" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField id="generoLivroInput" fx:id="generoLivroInput" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField id="anoLivroinput" fx:id="anoLivroInput" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField id="paginasLivroLabel" fx:id="paginasLivroInput" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
