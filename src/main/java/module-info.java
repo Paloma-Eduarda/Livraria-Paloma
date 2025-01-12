@@ -10,7 +10,10 @@ module br.ufrn.tads.livraria {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens br.ufrn.tads.livraria to javafx.fxml;
     exports br.ufrn.tads.livraria;
+    exports br.ufrn.tads.livraria.Controller;
+    opens br.ufrn.tads.livraria.Controller to javafx.fxml;
 }

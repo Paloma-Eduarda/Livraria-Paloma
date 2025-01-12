@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.tads.livraria.CadastroLivros">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.tads.livraria.Controller.CadastroLivrosController">
    <children>
       <GridPane layoutX="129.0" layoutY="71.0" prefHeight="258.0" prefWidth="343.0">
         <columnConstraints>

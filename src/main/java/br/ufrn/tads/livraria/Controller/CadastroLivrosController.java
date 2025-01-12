@@ -12,7 +12,6 @@ import java.util.ResourceBundle;
 public class CadastroLivrosController implements Initializable {
     @FXML
     private Label welcomeText;
-
     @FXML
     private TextField tituloLivroInput;
     @FXML
@@ -32,8 +31,9 @@ public class CadastroLivrosController implements Initializable {
     @FXML
     private Button botaoCancelarCadastroLivros;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public CadastroLivrosController() {
+    }
 
+    public void initialize(URL url, ResourceBundle resourceBundle) {
     }
 }
