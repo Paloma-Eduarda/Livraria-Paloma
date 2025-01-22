@@ -5,6 +5,8 @@ public class Autor {
     private int id;
     private String autor;
 
+    public Autor() {}
+
     public Autor(String autor, int id) {
         this.autor = autor;
         this.id = id;
@@ -24,5 +26,13 @@ public class Autor {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "autor='" + autor + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

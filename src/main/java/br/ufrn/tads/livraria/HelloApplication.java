@@ -1,6 +1,7 @@
 package br.ufrn.tads.livraria;
 
 import br.ufrn.tads.livraria.Repository.BancoDados;
+import br.ufrn.tads.livraria.Repository.LivroDAO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,7 +20,8 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println();
+        LivroDAO livroDAO = new LivroDAO();
+        System.out.println(livroDAO.getLivros());
 
        // launch();
     }

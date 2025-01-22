@@ -5,11 +5,12 @@ public class Livro {
     private String titulo;
     private Autor autor;
     private Editora editora;
-    private String isbn;
+    private int isbn;
     private String genero;
     private int ano;
 
-    public Livro(int id, int ano, Autor autor, Editora editora, String genero, String titulo, String isbn) {
+    public Livro() {}
+    public Livro(int id, int ano, Autor autor, Editora editora, String genero, String titulo, int isbn) {
         this.id = id;
         this.ano = ano;
         this.autor = autor;
@@ -21,6 +22,9 @@ public class Livro {
 
     public int getId() {
         return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
     public int getAno() {
         return ano;
@@ -54,11 +58,11 @@ public class Livro {
         this.editora = editora;
     }
 
-    public String getIsbn() {
+    public int getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
 
@@ -68,5 +72,18 @@ public class Livro {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "ano=" + ano +
+                ", id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", autor=" + autor +
+                ", editora=" + editora +
+                ", isbn=" + isbn +
+                ", genero='" + genero + '\'' +
+                '}';
     }
 }

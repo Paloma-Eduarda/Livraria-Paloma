@@ -4,6 +4,8 @@ public class Editora {
     private int id;
     private String nome;
 
+    public Editora() {}
+
     public Editora(int id, String nome) {
         this.id = id;
         this.nome = nome;
@@ -23,5 +25,13 @@ public class Editora {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Editora{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }
