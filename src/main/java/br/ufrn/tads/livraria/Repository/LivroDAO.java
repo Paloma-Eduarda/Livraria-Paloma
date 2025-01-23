@@ -37,17 +37,19 @@ public class LivroDAO {
         return livros;
     }
 
-    public void delete(int id) {
-        String sql = "DELETE FROM livro WHERE id = ?";
+    public boolean delete(Livro livro) {
+        String sql = "DELETE FROM livro WHERE idLivro = ?";
         PreparedStatement preparedStatement = null;
 
         try {
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setLong(1, id);
+            preparedStatement.setLong(1, livro.getId());
             preparedStatement.execute();
+            return true;
 
         } catch(Exception e) {
             e.printStackTrace();
+            return false;
         } finally {
 
             try {
@@ -82,11 +84,23 @@ public class LivroDAO {
         }
         return 1;
     }
+    public boolean alterar(Livro livro) {
+        String sql = "UPDATE livro SET titulo=?, genero=?, editora=?, anoPublicacao=?, autor=? WHERE idLivro=?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setString(1, livro.getTitulo());
+            stmt.setString(2, livro.getGenero());
+            stmt.setString(3, livro.getEditora());
+            stmt.setInt(4, livro.getAno());
+            stmt.setString(5, livro.getAutor());
+            stmt.setInt(6, livro.getId());
 
-
-
+            stmt.execute();
+            return true;
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
 }
 
 
-//String sql = "SELECT l.idLivro, l.titulo, l.isbn, l.genero, l.anopublicacao, a.autor, e.nome \n" +
-// "FROM livro AS l, autor as a, editora as e WHERE l.idautor = a.idAutor AND l.ideditora=e.ideditora";

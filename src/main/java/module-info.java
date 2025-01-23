@@ -11,6 +11,7 @@ module br.ufrn.tads.livraria {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires java.desktop;
 
     opens br.ufrn.tads.livraria to javafx.fxml;
     exports br.ufrn.tads.livraria;

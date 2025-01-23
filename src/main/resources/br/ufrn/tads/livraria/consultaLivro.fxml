@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="594.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.tads.livraria.Controller.ConsultaLivroController">
+<AnchorPane prefHeight="545.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.tads.livraria.Controller.ConsultaLivroController">
     <children>
         <SplitPane dividerPositions="0.5727923627684964" layoutX="152.0" layoutY="89.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -29,17 +29,25 @@
                         <Label layoutX="67.0" layoutY="31.0" text="Detalhes do Livro" />
                         <GridPane layoutX="38.0" layoutY="77.0" prefHeight="341.0" prefWidth="264.0">
                             <children>
-                                <Label id="tituloLivroLabel" text="Titulo" />
-                                <Label id="editoraLivroLabel" text="Editora:" GridPane.rowIndex="2" />
-                                <Label id="generoLivroLabel" prefHeight="55.0" prefWidth="49.0" text="Genero:" GridPane.rowIndex="3" />
-                                <Label id="autorLivroLabel" text="Autor:" GridPane.rowIndex="1" />
-                                <Label id="anoLivroLabel" layoutX="10.0" layoutY="106.0" text="Ano:" GridPane.rowIndex="4" />
+                                <Label id="tituloLivroLabel" text="Titulo" GridPane.rowIndex="1" />
+                                <Label id="editoraLivroLabel" text="Editora:" GridPane.rowIndex="3" />
+                                <Label id="generoLivroLabel" prefHeight="55.0" prefWidth="49.0" text="Genero:" GridPane.rowIndex="4" />
+                                <Label id="autorLivroLabel" text="Autor:" GridPane.rowIndex="2" />
+                                <Label id="anoLivroLabel" layoutX="10.0" layoutY="106.0" text="Ano:" GridPane.rowIndex="5" />
+                        <Label fx:id="labelTituloLivro" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelAutorLivro" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelEditoraLivro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelGeneroLivro" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelAnoLivro" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="ID" />
+                        <Label fx:id="labelIdLivro" prefHeight="19.0" prefWidth="97.0" GridPane.columnIndex="1" />
                             </children>
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="89.0" />
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="143.0" />
                             </columnConstraints>
                             <rowConstraints>
+                        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
                                 <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
                                 <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
                                 <RowConstraints maxHeight="66.0" minHeight="0.0" prefHeight="64.0" vgrow="SOMETIMES" />
@@ -47,8 +55,9 @@
                                 <RowConstraints maxHeight="144.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                         </GridPane>
-                        <Button fx:id="botaoAlterar" layoutX="82.0" layoutY="478.0" mnemonicParsing="false" text="Alterar " />
-                        <Button fx:id="botaoRemover" layoutX="192.0" layoutY="478.0" mnemonicParsing="false" text="Remover" />
+                        <Button fx:id="botaoAlterar" layoutX="155.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleButtonAlterar" text="Alterar " />
+                        <Button fx:id="botaoRemover" layoutX="229.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleButtonRemover" text="Remover" />
+                  <Button fx:id="botaoInserir" layoutX="83.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleButtonInserir" text="Inserir" />
                     </children>
                 </AnchorPane>
             </items>

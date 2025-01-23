@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -9,23 +10,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.tads.livraria.Controller.HelloController">
    <children>
-      <MenuBar>
+      <MenuBar style="-fx-background-color: #20b2aa; -fx-border-color: white;">
         <menus>
           <Menu fx:id="menuLivros" mnemonicParsing="false" text="Livros">
             <items>
-              <MenuItem fx:id="itemConsultaLivros" mnemonicParsing="false" onAction="#handleItemConsultaLivros" text="Consultar" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="itemConsultaLivros" mnemonicParsing="false" onAction="#handleItemConsultaLivros" style="-fx-background-color: #20b2aa; color: white;" text="Consultar" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane fx:id="anchorPane" prefHeight="368.0" prefWidth="600.0" />
+      <AnchorPane fx:id="anchorPane">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../fundoTela.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </VBox>
