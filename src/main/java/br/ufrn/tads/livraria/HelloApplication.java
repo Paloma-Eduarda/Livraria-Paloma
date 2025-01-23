@@ -1,5 +1,6 @@
 package br.ufrn.tads.livraria;
 
+import br.ufrn.tads.livraria.Model.Livro;
 import br.ufrn.tads.livraria.Repository.BancoDados;
 import br.ufrn.tads.livraria.Repository.LivroDAO;
 import javafx.application.Application;
@@ -20,9 +21,15 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        LivroDAO livroDAO = new LivroDAO();
-        System.out.println(livroDAO.getLivros());
+//        LivroDAO livroDAO = new LivroDAO();
+//        Livro livro = new Livro();
+//        livro.setTitulo("A culpa é das estrelas");
+//        livro.setGenero("Romance");
+//        livro.setEditora("Teste");
+//        livro.setAutor("Jonn");
+//        livro.setAno(2020);
+//        System.out.println(livroDAO.cadastrarLivro(livro));
 
-       // launch();
+       launch();
     }
 }

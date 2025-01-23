@@ -16,4 +16,5 @@ module br.ufrn.tads.livraria {
     exports br.ufrn.tads.livraria;
     exports br.ufrn.tads.livraria.Controller;
     opens br.ufrn.tads.livraria.Controller to javafx.fxml;
+    opens br.ufrn.tads.livraria.Model to javafx.base;
 }
